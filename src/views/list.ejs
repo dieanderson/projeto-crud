@@ -12,6 +12,7 @@
             <li>
                 <%= `Nome: ${user.name} | Idade: ${user.age} | E-mail: ${user.email}` %>
                 <a href="/edit?id=<%= user._id %>">[editar]</a>
+                <a href="/remove/<%= user._id %>" onclick="return confirm('Deseja realmente excluir o cliente?')">[excluir]</a>
             </li>
         <% }) %>
     </ul>
